@@ -5,7 +5,7 @@ int main(int argc, char **argv)
 {
     // Inicializa o ROS
     // O argumento "talker" corresponde ao nome atribuido ao nó
-    ros::init(argc, argv, "talker");
+    ros::init(argc, argv, "talker_cpp");
 
     // Criação de um NodeHandle
     // Responsável por estabelecer a comunicação com o sistema ROS

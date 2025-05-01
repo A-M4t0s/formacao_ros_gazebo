@@ -1,0 +1,3 @@
+string id
+int32 iteracao
+sensor_msgs/Temperature temperatura

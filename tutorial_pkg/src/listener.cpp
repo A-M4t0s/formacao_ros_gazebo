@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 {
     // Inicializa o ROS
     // O argumento "listener" corresponde ao nome atribuido ao nó
-    ros::init(argc, argv, "listener");
+    ros::init(argc, argv, "listener_cpp");
 
     // Criação de um NodeHandle
     // Responsável por estabelecer a comunicação com o sistema ROS

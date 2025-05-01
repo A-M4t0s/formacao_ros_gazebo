@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -48,18 +49,16 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  tut_msg.msg
+)
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  AddTwoInts.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -69,10 +68,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   sensor_msgs#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs sensor_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -106,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES tutorial_pkg
-#  CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs
+  CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs message_generation
 #  DEPENDS system_lib
 )
 
@@ -136,7 +135,9 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/tutorial_pkg_node.cpp)
 add_executable(publisher_node src/publisher.cpp)
-add_executable(listener_node src/listener.cpp)
+add_executable(listener_node src/listener.cpp)  
+add_executable(tut_msg_publisher_node src/tut_msg_publisher.cpp)
+add_executable(server_node src/server.cpp)  
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -159,6 +160,14 @@ target_link_libraries(publisher_node
 target_link_libraries(listener_node
    ${catkin_LIBRARIES}
 )
+
+target_link_libraries(tut_msg_publisher_node
+   ${catkin_LIBRARIES}
+)
+
+target_link_libraries(server_node
+   ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
@@ -171,6 +180,8 @@ target_link_libraries(listener_node
 catkin_install_python(PROGRAMS
   scripts/listener.py
   scripts/publisher.py
+  scripts/helloWorld.py
+  scripts/server.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
