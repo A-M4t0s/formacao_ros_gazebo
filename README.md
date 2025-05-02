@@ -1,8 +1,8 @@
-# formacao_ros_gazebo
+![image](https://github.com/user-attachments/assets/447d8256-fa72-4988-a51b-00ae30a7048b)# formacao_ros_gazebo
 
 **Este repositório tem como objetivo o apoio ao Workshop de ros/gazebo do dia 02/05/2025 na sala F402**
 
-## Contituição do Package tutorial_pkg
+## Constituição do Package tutorial_pkg
 
 ### Mensagens personalizadas
 
@@ -41,4 +41,22 @@
 
 **tut_msg_publisher.cpp** -> Nó publicador no tópico **custom_data** a mensagem personalizada **tut_msg**
 
+## Constituição do ex_final_pkg
 
+**Este package é uma ajuda para o exercicio final do robo aspirador, basta escolher uma linguagem para implementar o nó necessário para a navegação e percepção**
+
+### Launch
+
+Rodar o launch de acordo com o nó implementado
+
+**aspirador_cpp.launch** -> launch para rodar o nó em cpp, o mundo e o robô
+
+**aspirador_py.launch** -> launch para rodar o nó em python, o mundo e o robô
+
+### Scripts
+
+**aspirador.py** -> código base para implementação do nó em python
+
+### Src
+
+**aspirador.cpp** -> código base para implementação do nó em python
