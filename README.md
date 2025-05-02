@@ -46,7 +46,17 @@
 **tut_msg_publisher.cpp** -> Nó publicador no tópico **custom_data** a mensagem personalizada **tut_msg**
 
 
-## Constituição do 
+## Constituição do pkg_exercicios
+
+**Package de apoio para os exercicios de implementação de subscritor, publicador, serviços e mensagens**
+
+### Scripts
+
+**ficheiros de apoio a resolução dos 4 exercicios em python**
+
+### Src
+
+**Ficheiros de aopio para a resolução dos 4 exercicios em c++**
 
 ## Constituição do ex_final_pkg
 
