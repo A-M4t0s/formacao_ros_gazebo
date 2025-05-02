@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/447d8256-fa72-4988-a51b-00ae30a7048b)# formacao_ros_gazebo
+![image](https://github.com/user-attachments/assets/447d8256-fa72-4988-a51b-00ae30a7048b)
+
+# formacao_ros_gazebo
 
 **Este repositório tem como objetivo o apoio ao Workshop de ros/gazebo do dia 02/05/2025 na sala F402**
 
