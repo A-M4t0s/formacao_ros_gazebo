@@ -1,0 +1,3 @@
+<launch>
+  <node name="roboAspirador" pkg="ex_final_pkg" type="aspirador_cpp" output="screen" />
+</launch>
