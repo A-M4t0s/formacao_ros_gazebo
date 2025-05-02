@@ -6,6 +6,8 @@
 
 ## Constituição do Package tutorial_pkg
 
+**Este package serve como exemplo ao longo do workshop,tem exemplo de subscritores, publicadores, mensagens e serviços, de modo a facilitar a aprendizagem e a implementação no futuro**
+
 ### Mensagens personalizadas
 
 **tut_msg.msg** -> Mensagem que adiciona um ID e uma Iteração a uma mensagem sensor_msgs/Temperature temperatura
@@ -42,6 +44,9 @@
 **server.cpp** -> Nó servidor para implementar o serviço **AddTwoInts.srv** e imprime o resultado da soma no terminal
 
 **tut_msg_publisher.cpp** -> Nó publicador no tópico **custom_data** a mensagem personalizada **tut_msg**
+
+
+## Constituição do 
 
 ## Constituição do ex_final_pkg
 
